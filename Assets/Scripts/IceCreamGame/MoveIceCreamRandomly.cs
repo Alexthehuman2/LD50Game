@@ -10,10 +10,13 @@ public class MoveIceCreamRandomly : MonoBehaviour
 
     [SerializeField] private GameObject iceCreamCone;
     [SerializeField] private GameObject floor;
+    [SerializeField] private GameObject winLossScreen;
 
     [SerializeField] private bool fallingOff;
     [SerializeField] private ScoreScript scoreScript;
     [SerializeField] private IceCreamController control;
+    [SerializeField] private GameTimer timer;
+
 
     private void Start()
     {
@@ -46,9 +49,9 @@ public class MoveIceCreamRandomly : MonoBehaviour
     {
         if (collision.gameObject == floor)
         {
-            Debug.Log("Game Over");
             scoreScript.toggleScoreIncrease(false);
-            //GameOver, show score, back to menu screen.
+
+            winLossScreen.SetActive(true);
         }
     }
 }
