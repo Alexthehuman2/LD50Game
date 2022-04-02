@@ -35,7 +35,7 @@ public class GameTimer : MonoBehaviour
 
     public void checkTimer()
     {
-        if (sleepSlider.value <= 0.1)
+        if (sleepSlider.value <= 0.01)
         {
             winLossScript.setState(WinLossState.WIN);
         }
