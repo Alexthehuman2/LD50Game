@@ -291,6 +291,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &619149630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1248033385085807240, guid: b833f28dd0556674b9e3c6516aea11ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1257737269483669707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &860764922
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,8 +503,18 @@ PrefabInstance:
       objectReference: {fileID: 860764922}
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 619149630}
+    - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
+      propertyPath: moveable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
       propertyPath: pushForce
-      value: 10
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
@@ -509,6 +531,11 @@ PrefabInstance:
       propertyPath: winLossScreen
       value: 
       objectReference: {fileID: 1257737269483669708}
+    - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
+      propertyPath: pushForceMulitplier
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538f3de8350730b4fb91cebbfc2bedea, type: 3}
 --- !u!1 &1261906908 stripped
@@ -775,8 +802,23 @@ PrefabInstance:
       objectReference: {fileID: 11390364}
     - target: {fileID: 1248033385085807240, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385085807240, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
       propertyPath: m_Interactable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385085807240, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: checkTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385085807240, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1248033385085807241, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
@@ -998,6 +1040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLossPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5805566145342869229, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6398422172933822677, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_IsActive
@@ -1022,6 +1069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997919912905857854, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: drainRate
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6997919912905857854, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}

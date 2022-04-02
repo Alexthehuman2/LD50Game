@@ -9,6 +9,7 @@ public class GameTimer : MonoBehaviour
     public float drainRate;
     public float scalingFactor;
     [SerializeField] private bool scalingDrainRate = true;
+    [SerializeField] private bool drainingTimer = true;
     [SerializeField] private GameObject winLossPanel;
     private WinLossUI winLossScript;
 
@@ -22,18 +23,26 @@ public class GameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sleepSlider.value -= Time.deltaTime * drainRate;
-        if (scalingDrainRate)
+        if (drainingTimer)
         {
-            drainRate *= scalingFactor;
+            sleepSlider.value -= Time.deltaTime * drainRate;
+            if (scalingDrainRate)
+            {
+                drainRate *= scalingFactor;
+            }
         }
     }
 
     public void checkTimer()
     {
-        if (sleepSlider.value <= 0)
+        if (sleepSlider.value <= 0.1)
         {
             winLossScript.setState(WinLossState.WIN);
         }
+    }
+
+    public void drainTimer(bool tf)
+    {
+        drainingTimer = tf;
     }
 }
