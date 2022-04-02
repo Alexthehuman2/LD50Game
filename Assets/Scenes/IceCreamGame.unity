@@ -121,6 +121,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11390359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 11390359, guid: b833f28dd0556674b9e3c6516aea11ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1257737269483669707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &11390363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11390359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66003f650c595f749a00a1de0aae55cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score_increasing: 0
+--- !u!114 &11390364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8117980954798062440, guid: b833f28dd0556674b9e3c6516aea11ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1257737269483669707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11390359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66003f650c595f749a00a1de0aae55cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &147744798
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,13 +630,18 @@ PrefabInstance:
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
       propertyPath: pushForce
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
       propertyPath: iceCreamCone
       value: 
       objectReference: {fileID: 904818806}
+    - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
+      propertyPath: score_script
+      value: 
+      objectReference: {fileID: 11390364}
     - target: {fileID: 4635023311182161369, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
       propertyPath: m_BodyType
@@ -625,6 +661,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3232985155999418478, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1364260829}
     - target: {fileID: 5164311870259457398, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_Name
@@ -735,7 +776,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8529429746692463793, guid: b833f28dd0556674b9e3c6516aea11ea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b833f28dd0556674b9e3c6516aea11ea, type: 3}
 --- !u!1001 &8482816432635166010
 PrefabInstance:

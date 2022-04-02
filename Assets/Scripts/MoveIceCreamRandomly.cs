@@ -12,14 +12,13 @@ public class MoveIceCreamRandomly : MonoBehaviour
     [SerializeField] private GameObject floor;
 
     [SerializeField] private bool fallingOff;
+    [SerializeField] private ScoreScript score_script;
 
     private int score = 0;
 
     private void Start()
     {
         iceCreamRB = this.GetComponent<Rigidbody2D>();
-        score = GameController.Instance.score;
-        StartCoroutine(increaseScore());
     }
 
     // Update is called once per frame
@@ -32,17 +31,6 @@ public class MoveIceCreamRandomly : MonoBehaviour
             Vector2 newForce = new Vector2(randX / 10, 0);
             iceCreamRB.AddForce(newForce * pushForce);
         }
-    }
-
-    IEnumerator increaseScore()
-    {
-        while (!fallingOff)
-        {
-            yield return new WaitForSeconds(0.5f);
-            score++;
-        }
-        Debug.Log("Final Score: " + score);
-        GameController.Instance.setScore(score);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -58,6 +46,7 @@ public class MoveIceCreamRandomly : MonoBehaviour
         if (collision.gameObject == floor)
         {
             Debug.Log("Game Over");
+            score_script.toggleScoreIncrease(false);
             //GameOver, show score, back to menu screen.
         }
     }
