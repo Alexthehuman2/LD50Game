@@ -8,7 +8,7 @@ public class ScoreScript : MonoBehaviour
 
     [SerializeField] private bool scoreIncreasing = false;
     [SerializeField] private float waitInSeconds = 0.5f;
-    private int score;
+    public int score { get; private set; }
     private Text scoreText;
 
     private void Start()
@@ -24,12 +24,11 @@ public class ScoreScript : MonoBehaviour
     {
         while (scoreIncreasing)
         {
-            yield return new WaitForSeconds(waitInSeconds);
             score++;
+            GameController.Instance.setScore(score);
             scoreText.text = score.ToString();
+            yield return new WaitForSeconds(waitInSeconds);
         }
-        Debug.Log("Final Score: " + score);
-        GameController.Instance.setScore(score);
     }
 
     //Toggles whether score increases or not - if you turned it off, it'll restart coroutine
