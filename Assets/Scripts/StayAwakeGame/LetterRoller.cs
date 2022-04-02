@@ -5,6 +5,7 @@ using UnityEngine;
 public class LetterRoller : MonoBehaviour
 {
     private char letter;
+    [SerializeField]private GameController controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -131,5 +132,13 @@ public class LetterRoller : MonoBehaviour
         char ch = (char)('a' + a);
 
         return ch;
+    }
+    public void checkKey(char key)
+    {
+        if (key == letter)
+        {
+            //increase score
+            key = RollLetter();
+        }
     }
 }
