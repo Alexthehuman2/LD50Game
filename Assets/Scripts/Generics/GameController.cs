@@ -6,12 +6,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
 
-    public int score { get; private set; }
-
-    public void setScore(int new_score)
-    {
-        score = new_score;
-    }
+    public int score;
 
     private void Awake()
     {
@@ -21,15 +16,8 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            DontDestroyOnLoad(gameObject);
             Instance = this;
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (this == Instance)
-        {
-            Debug.Log("Destroying a GameController");
         }
     }
 }

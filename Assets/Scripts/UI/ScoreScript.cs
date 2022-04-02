@@ -13,6 +13,7 @@ public class ScoreScript : MonoBehaviour
 
     private void Start()
     {
+        score = GameController.Instance.score;
         scoreText = this.GetComponent<Text>();
         scoreText.text = GameController.Instance.score.ToString();
         scoreIncreasing = true;
@@ -25,7 +26,7 @@ public class ScoreScript : MonoBehaviour
         while (scoreIncreasing)
         {
             score++;
-            GameController.Instance.setScore(score);
+            GameController.Instance.score = score;
             scoreText.text = score.ToString();
             yield return new WaitForSeconds(waitInSeconds);
         }
@@ -45,6 +46,6 @@ public class ScoreScript : MonoBehaviour
     public void changeScoreText(int new_score)
     {
         scoreText.text = new_score.ToString();
-        GameController.Instance.setScore(new_score);
+        GameController.Instance.score = new_score;
     }
 }
