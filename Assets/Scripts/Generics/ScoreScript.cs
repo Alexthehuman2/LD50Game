@@ -6,39 +6,37 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
 
-    [SerializeField] private bool score_increasing = false;
+    [SerializeField] private bool scoreIncreasing = false;
     private int score;
-    private Text score_text;
+    private Text scoreText;
 
     private void Start()
     {
-        score_text = this.GetComponent<Text>();
-        score_text.text = GameController.Instance.score.ToString();
-        score_increasing = true;
+        scoreText = this.GetComponent<Text>();
+        scoreText.text = GameController.Instance.score.ToString();
+        scoreIncreasing = true;
         StartCoroutine(increaseScore());
     }
 
     IEnumerator increaseScore()
     {
-        while (score_increasing)
+        while (scoreIncreasing)
         {
             yield return new WaitForSeconds(0.5f);
             score++;
-            score_text.text = score.ToString();
-            Debug.Log("Still Running");
+            scoreText.text = score.ToString();
         }
         Debug.Log("Final Score: " + score);
         GameController.Instance.setScore(score);
-        StopCoroutine(increaseScore());
     }
 
     public void toggleScoreIncrease(bool tf)
     {
-        score_increasing = tf;
+        scoreIncreasing = tf;
     }
 
     public void changeScoreText(int new_score)
     {
-        score_text.text = new_score.ToString();
+        scoreText.text = new_score.ToString();
     }
 }

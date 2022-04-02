@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveIceCreamRandomly : MonoBehaviour
 {
-
+    [SerializeField] private float pushForceMulitplier = 2f;
     [SerializeField] private float pushForce = 5f;
     [SerializeField] private Rigidbody2D iceCreamRB;
 
@@ -12,13 +12,13 @@ public class MoveIceCreamRandomly : MonoBehaviour
     [SerializeField] private GameObject floor;
 
     [SerializeField] private bool fallingOff;
-    [SerializeField] private ScoreScript score_script;
-
-    private int score = 0;
+    [SerializeField] private ScoreScript scoreScript;
+    [SerializeField] private IceCreamController control;
 
     private void Start()
     {
         iceCreamRB = this.GetComponent<Rigidbody2D>();
+        control = this.GetComponent<IceCreamController>();
     }
 
     // Update is called once per frame
@@ -27,9 +27,10 @@ public class MoveIceCreamRandomly : MonoBehaviour
         if (!fallingOff)
         {
             //rigidbody2d add force to an axis randomly between clamped to -1 to 1, multiplied by pushforce
-            float randX = Random.Range(-10, 10);
+            float randX = Random.Range(-10, 11);
             Vector2 newForce = new Vector2(randX / 10, 0);
-            iceCreamRB.AddForce(newForce * pushForce);
+            float newPush = Random.Range(-1, 1) > 0 ? pushForceMulitplier * pushForce : -pushForceMulitplier * pushForce;
+            iceCreamRB.AddForce(newForce * newPush + control.inputDir);
         }
     }
 
@@ -46,7 +47,7 @@ public class MoveIceCreamRandomly : MonoBehaviour
         if (collision.gameObject == floor)
         {
             Debug.Log("Game Over");
-            score_script.toggleScoreIncrease(false);
+            scoreScript.toggleScoreIncrease(false);
             //GameOver, show score, back to menu screen.
         }
     }
