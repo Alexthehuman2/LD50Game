@@ -8,11 +8,8 @@
 - Mutation (Metroidvania a blob of flesh getting more limbs as you go through the level)
 - Make Connections (Making TCP Connections as fast as possible by dragging something or doing something)
 - Fragile (Everything is brittle so they lose durability on any interaction.)
-
 - Space is limited (Luggage packing with given amount of items that uses up a certain amount of slots and you have to fit em all in)
 - Combine (Combining Machine Parts and submit it to the customer.)
-- 
-
 - Delay the inevitable (Dinosaur game)
 
 Death? 
