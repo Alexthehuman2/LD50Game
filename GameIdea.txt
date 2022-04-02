@@ -1,0 +1,31 @@
+- Out of order (Mimic Hunting Simulator, Expectation Defying game)
+- Overgrown/Garden (tree trimming/lawnmowing (color) for customer game)
+- Road Trip (appeasing 4 people in a car before they murder each o ther from boredom)
+- Tunnels (Pathfinding [charting] an unexplored cave by getting user to draw on it, beat em up for film)
+- Infestation (Termite Infestation, block based infestation and user have to click on the infested tile to fix)
+- Shelter (Animal Shelter offering pets to potential buyers)
+- A Single Resource (1 button minigame)
+- Mutation (Metroidvania a blob of flesh getting more limbs as you go through the level)
+- Make Connections (Making TCP Connections as fast as possible by dragging something or doing something)
+- Fragile (Everything is brittle so they lose durability on any interaction.)
+
+- Space is limited (Luggage packing with given amount of items that uses up a certain amount of slots and you have to fit em all in)
+- Combine (Combining Machine Parts and submit it to the customer.)
+- 
+
+- Delay the inevitable (Dinosaur game)
+
+Death? 
+The end of something
+
+What is the Inevitable
+Why is it inevitable
+How do you delay that inevitable
+
+Minigame about childhood
+- Staying up as long as possible (Birgerz)
+	- spamming button as fast as possible to boost gauge which decreases as time goes on.
+- Having fun in the park (injuries)
+	- Stablizing left and right to balance the kid so they don't fall over and injure themselves
+- Dropping Ice Cream on the floor
+	- Balancing game
