@@ -25,4 +25,9 @@ Minigame about childhood
 - Having fun in the park (injuries)
 	- Stablizing left and right to balance the kid so they don't fall over and injure themselves
 - Dropping Ice Cream on the floor
-	- Balancing game
+	- Balancing game, Increase Score for remaining balls, Cone Rotation
+	- Hardmode: Spheres
+- Bicycle race
+	- Spam WASD
+- Climbing
+	- 
