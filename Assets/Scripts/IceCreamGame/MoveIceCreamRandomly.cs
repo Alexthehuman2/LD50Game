@@ -15,6 +15,7 @@ public class MoveIceCreamRandomly : MonoBehaviour
     [SerializeField] private bool fallingOff;
     [SerializeField] private ScoreScript scoreScript;
     [SerializeField] private IceCreamController control;
+    [SerializeField] private GameTimer timer;
 
 
     private void Start()

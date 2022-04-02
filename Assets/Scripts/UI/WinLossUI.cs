@@ -12,7 +12,7 @@ public enum WinLossState
 
 public class WinLossUI : MonoBehaviour
 {
-    private WinLossState state = WinLossState.LOSS;
+    public WinLossState state { get; private set; }
 
     [SerializeField] private GameObject WinText;
     [SerializeField] private GameObject LoseText;
@@ -56,6 +56,10 @@ public class WinLossUI : MonoBehaviour
         }
     }
 
+    public void setState(WinLossState winLoss)
+    {
+        state = winLoss;
+    }
     public void ReturnToTitle()
     {
         //scenemanagement.loadscene...

@@ -194,9 +194,9 @@ GameObject:
   m_Component:
   - component: {fileID: 458957325412127751}
   - component: {fileID: 458957325412127749}
-  - component: {fileID: 458957325412127748}
+  - component: {fileID: 8508134863952160179}
   m_Layer: 5
-  m_Name: Sleep Slider
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &458957325412127748
+--- !u!114 &8508134863952160179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,9 +282,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 458957325412127750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2a6b52b89ae2241857e6d42e643851, type: 3}
+  m_Script: {fileID: 11500000, guid: 804b7295ebd04e64aaccd918e8799884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sleepSlider: {fileID: 458957325412127749}
-  drainRate: 0.05
-  scalingFactor: 1.0005
+  sleepSlider: {fileID: 0}
+  drainRate: 0.1
+  scalingFactor: 1.005
+  scalingDrainRate: 0

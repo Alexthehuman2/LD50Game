@@ -773,6 +773,31 @@ PrefabInstance:
       propertyPath: inGameScore
       value: 
       objectReference: {fileID: 11390364}
+    - target: {fileID: 1248033385085807240, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385085807241, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: drainRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385085807243, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385503897322, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248033385503897322, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1849235438962468788, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -836,6 +861,16 @@ PrefabInstance:
     - target: {fileID: 3342911707862943590, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418644706306441822, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418644706306441822, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4696857985463730593, guid: b833f28dd0556674b9e3c6516aea11ea,
@@ -988,6 +1023,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -348
       objectReference: {fileID: 0}
+    - target: {fileID: 6997919912905857854, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: winLossPanel
+      value: 
+      objectReference: {fileID: 1257737269483669708}
     - target: {fileID: 7176762824448487893, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_Text
