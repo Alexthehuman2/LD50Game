@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class LetterRoller : MonoBehaviour
 {
+    private char letter;
     // Start is called before the first frame update
     void Start()
     {
-        
+        letter = RollLetter();
     }
 
     // Update is called once per frame
