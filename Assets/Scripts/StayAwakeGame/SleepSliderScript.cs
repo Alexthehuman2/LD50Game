@@ -13,7 +13,7 @@ public class SleepSliderScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,5 +24,10 @@ public class SleepSliderScript : MonoBehaviour
         {
             drainRate *= scalingFactor;
         }
+    }
+
+    public void IncrementSlider(float amount)
+    {
+        sleepSlider.value += amount;
     }
 }
