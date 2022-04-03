@@ -560,6 +560,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7428910425976060711, guid: d8d0828250ae1d141859e7f3fd8202dc,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7833915193545475600, guid: d8d0828250ae1d141859e7f3fd8202dc,
         type: 3}
       propertyPath: m_RootOrder
@@ -750,6 +755,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4616647144583056540, guid: 5aa82081c2d458b40a5185fd339ef266,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616647144583056540, guid: 5aa82081c2d458b40a5185fd339ef266,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5148069084516271295, guid: 5aa82081c2d458b40a5185fd339ef266,
         type: 3}
       propertyPath: m_Name
@@ -768,6 +783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350843979619939779, guid: fd41daa79488b5248bf5df520ac1e680,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5035562416087827376, guid: fd41daa79488b5248bf5df520ac1e680,
         type: 3}
@@ -912,6 +932,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7415530750366181572, guid: 59fbfae888bbc2147ba272c42a014201,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415530750366181572, guid: 59fbfae888bbc2147ba272c42a014201,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7874019607359526387, guid: 59fbfae888bbc2147ba272c42a014201,
         type: 3}
       propertyPath: m_RootOrder
@@ -1053,7 +1083,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
