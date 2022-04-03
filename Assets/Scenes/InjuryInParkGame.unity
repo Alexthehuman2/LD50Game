@@ -540,6 +540,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2276973771653966970, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999962
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276973771653966970, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276973771653966970, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276973771653966970, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.008726558
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276973771653966970, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3070121981179073839, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
       propertyPath: m_Name
@@ -573,7 +598,7 @@ PrefabInstance:
     - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
       propertyPath: fallSpeed
-      value: 10
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
@@ -582,9 +607,19 @@ PrefabInstance:
       objectReference: {fileID: 1262939420}
     - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
+      propertyPath: fallSpeedCap
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
       propertyPath: winLossPanel
       value: 
       objectReference: {fileID: 1246825785}
+    - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: playerRotInfluence
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9, type: 3}
 --- !u!1001 &7436784153841257034
