@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
 
     public int score;
 
+    public bool canMove;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
