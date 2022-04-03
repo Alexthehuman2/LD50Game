@@ -9,6 +9,7 @@ public class SleepSliderScript : MonoBehaviour
     public float drainRate;
     public float scalingFactor;
     [SerializeField] private bool scalingDrainRate = true;
+    [SerializeField] private WinLossUI winloss;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,11 @@ public class SleepSliderScript : MonoBehaviour
     void Update()
     {
         sleepSlider.value -= Time.deltaTime * drainRate;
+        if(sleepSlider.value <= 0)
+        {
+            winloss.setState(WinLossState.WIN);
+            winloss.gameObject.SetActive(true);
+        }
         if (scalingDrainRate)
         {
             drainRate *= scalingFactor;
