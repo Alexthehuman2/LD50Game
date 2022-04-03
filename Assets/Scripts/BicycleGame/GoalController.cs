@@ -22,10 +22,12 @@ public class GoalController : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             winloss.setState(WinLossState.WIN);
+            winloss.gameObject.SetActive(true);
         }
         else
         {
             winloss.setState(WinLossState.LOSS);
+            winloss.gameObject.SetActive(true);
         }
     }
 }
