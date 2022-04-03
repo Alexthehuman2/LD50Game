@@ -122,6 +122,11 @@ public class LetterRoller : MonoBehaviour
         {
             checkKey('z');
         }
+
+        if(timer.sleepSlider.value <= 0)
+        {
+            GameObject.Find("WInLossUI").GetComponent<WinLossUI>().setState(WinLossState.LOSS);
+        }
     }
 
     public char RollLetter()
