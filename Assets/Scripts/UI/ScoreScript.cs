@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-
+    //Dictates whether Score increases or not
     [SerializeField] private bool scoreIncreasing = false;
+
+    //Dictates how fast the score goes up
     [SerializeField] private float waitInSeconds = 0.5f;
+
+    //A simple getter and setter for score
     public int score { get; private set; }
+
+    //The Text variable which displays the score
     private Text scoreText;
 
     private void Start()
