@@ -13,6 +13,6 @@ public class MoveCompetitor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.GetComponent<Rigidbody2D>().velocity += new Vector2((0.015f + (baseSpeed * GameController.Instance.score) * Time.deltaTime), 0);
+        gameObject.transform.GetComponent<Rigidbody2D>().velocity += new Vector2((0.015f + (baseSpeed * GameController.Instance.score/10) * Time.deltaTime), 0);
     }
 }
