@@ -14,6 +14,7 @@ public class GoalScript : MonoBehaviour
         if (collision.gameObject == player)
         {
             player.GetComponent<Rigidbody2D>().isKinematic = true;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             GameController.Instance.canMove = false;
             if (hasScore)
             {

@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &1195965126 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6970965342962920247, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7178728276468874765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1246825785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5805566145342869229, guid: b833f28dd0556674b9e3c6516aea11ea,
@@ -132,12 +138,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 11390359, guid: b833f28dd0556674b9e3c6516aea11ea,
     type: 3}
   m_PrefabInstance: {fileID: 1432794972}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1401593338 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7178728277281874935, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7178728276468874765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1432794972
 PrefabInstance:
@@ -260,11 +260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1401593338}
+      objectReference: {fileID: 1195965126}
     - target: {fileID: 3232985155999418478, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_PlaneDistance
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3342911707862943590, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 6639218393749182578, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -306.98
+      value: -306.98004
       objectReference: {fileID: 0}
     - target: {fileID: 7482937434760304801, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
@@ -545,26 +545,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerKid
       objectReference: {fileID: 0}
-    - target: {fileID: 3070121981179073839, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+    - target: {fileID: 4814782535344324020, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5622434554480560464, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
-        type: 3}
-      propertyPath: m_Mass
+      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5622434554480560464, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+    - target: {fileID: 4814782535344324020, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
-      propertyPath: m_AngularDrag
+      propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5622434554480560464, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+    - target: {fileID: 4814782535344324020, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
-      propertyPath: m_GravityScale
-      value: 1
+      propertyPath: m_LocalRotation.y
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814782535344324020, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814782535344324020, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: fallSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1262939420}
+    - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
+        type: 3}
+      propertyPath: winLossPanel
+      value: 
+      objectReference: {fileID: 1246825785}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9, type: 3}
 --- !u!1001 &7436784153841257034
