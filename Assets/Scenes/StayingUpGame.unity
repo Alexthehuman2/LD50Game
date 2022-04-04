@@ -208,7 +208,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 11390359, guid: b833f28dd0556674b9e3c6516aea11ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 234432716691748357, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
@@ -268,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 1849235438962468788, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 392.41
+      value: 392.40997
       objectReference: {fileID: 0}
     - target: {fileID: 1849235438962468788, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
@@ -470,6 +470,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8117980954798062440, guid: b833f28dd0556674b9e3c6516aea11ea,
+        type: 3}
+      propertyPath: scoreIncreasing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8344379435884450656, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -516,7 +521,6 @@ GameObject:
   - component: {fileID: 489675300}
   - component: {fileID: 489675299}
   - component: {fileID: 489675298}
-  - component: {fileID: 489675301}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -589,20 +593,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &489675301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489675297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132e3f5192b835646b6890b9406a76b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  canMove: 0
 --- !u!1 &994190263
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  canMove: 0
+  canMove: 1
 --- !u!4 &1933028401
 Transform:
   m_ObjectHideFlags: 0
