@@ -539,7 +539,7 @@ PrefabInstance:
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
       propertyPath: scoreInfluenceRate
-      value: 1.004
+      value: 1.001
       objectReference: {fileID: 0}
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
@@ -572,7 +572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceCreamRB2D: {fileID: 0}
-  inputForce: 1
+  scoreInfluenceRate: 1.001
+  inputForce: 1.5
 --- !u!1 &1364260827
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132e3f5192b835646b6890b9406a76b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 200
   canMove: 0
 --- !u!4 &2021264643
 Transform:
