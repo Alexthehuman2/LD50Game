@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 10
   scoreInfluenceRate: 1.001
-  CPUModifierRange: 12
+  CPUModifierRange: 11
   CPUModifierMinRange: 5
 --- !u!61 &7275573672001496067
 BoxCollider2D:
@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 10
   scoreInfluenceRate: 1.001
-  CPUModifierRange: 12
+  CPUModifierRange: 11
   CPUModifierMinRange: 5
 --- !u!50 &8791602054217657068
 Rigidbody2D:
@@ -1875,5 +1875,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 10
   scoreInfluenceRate: 1.001
-  CPUModifierRange: 12
+  CPUModifierRange: 11
   CPUModifierMinRange: 5
