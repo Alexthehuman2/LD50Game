@@ -136,7 +136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 252470045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdcab13047417e34a8a7943bc99e5dac, type: 3}
+  m_Script: {fileID: 11500000, guid: 34423e1868cd5884caa4614300c50899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &283070380
@@ -772,6 +772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132e3f5192b835646b6890b9406a76b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  canMove: 0
 --- !u!4 &1762315588
 Transform:
   m_ObjectHideFlags: 0
