@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Enum for Win/Loss State
 public enum WinLossState
 {
     LOSS = 0,
@@ -24,7 +25,13 @@ public class WinLossUI : MonoBehaviour
     [SerializeField] private GameObject TimerUntilNextGame;
     [SerializeField] private ScoreScript inGameScore;
 
+    private void Start()
+    {
 
+        this.gameObject.SetActive(false);
+    }
+
+    //A Switch Case that displays the correct info based on state.
     private void OnEnable()
     {
         switch (state)
@@ -56,6 +63,7 @@ public class WinLossUI : MonoBehaviour
         }
     }
 
+    //Sets whether the Win Loss Panel display win or lose information under the same game object
     public void setState(WinLossState winLoss)
     {
         state = winLoss;

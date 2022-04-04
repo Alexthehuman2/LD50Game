@@ -5,14 +5,21 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-
+    //Dictates whether Score increases or not
     [SerializeField] private bool scoreIncreasing = false;
+
+    //Dictates how fast the score goes up
     [SerializeField] private float waitInSeconds = 0.5f;
+
+    //A simple getter and setter for score
     public int score { get; private set; }
+
+    //The Text variable which displays the score
     private Text scoreText;
 
     private void Start()
     {
+        score = GameController.Instance.score;
         scoreText = this.GetComponent<Text>();
         scoreText.text = GameController.Instance.score.ToString();
         scoreIncreasing = true;
@@ -25,7 +32,7 @@ public class ScoreScript : MonoBehaviour
         while (scoreIncreasing)
         {
             score++;
-            GameController.Instance.setScore(score);
+            GameController.Instance.score = score;
             scoreText.text = score.ToString();
             yield return new WaitForSeconds(waitInSeconds);
         }
@@ -45,6 +52,6 @@ public class ScoreScript : MonoBehaviour
     public void changeScoreText(int new_score)
     {
         scoreText.text = new_score.ToString();
-        GameController.Instance.setScore(new_score);
+        GameController.Instance.score = new_score;
     }
 }

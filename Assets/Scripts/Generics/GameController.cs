@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    //Global Score
+    public int score;
+    //Global Statement whether objects can move
+    public bool canMove;
+
+
+
+    //Do not add anything beyond this line
+    //------------------------------------------------------------------------------------------------------------------------------------------
+    //DO NOT TOUCH, Singleton Setup
     public static GameController Instance { get; private set; }
-
-    public int score { get; private set; }
-
-    public void setScore(int new_score)
-    {
-        score = new_score;
-    }
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -21,15 +23,8 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            DontDestroyOnLoad(gameObject);
             Instance = this;
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (this == Instance)
-        {
-            Debug.Log("Destroying a GameController");
         }
     }
 }

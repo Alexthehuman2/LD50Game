@@ -137,7 +137,7 @@ public class LetterRoller : MonoBehaviour
     {
         if (key == char.ToLower(letter))
         {
-            control.setScore(control.score + 1);
+            control.score = control.score + 1;
             letter = char.ToUpper(RollLetter());
             letterText.text = letter.ToString();
             timer.IncrementSlider(0.05f);

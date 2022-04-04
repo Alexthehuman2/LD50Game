@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class BicycleController : MonoBehaviour
 {
     private int stage = 0;
     // Start is called before the first frame update

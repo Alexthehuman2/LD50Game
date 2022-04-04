@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 5802737856795964755}
   - component: {fileID: 192272323566908688}
   - component: {fileID: 3534996725100711381}
+  - component: {fileID: 3634881811783956463}
   m_Layer: 5
   m_Name: TimerToNextScene
   m_TagString: Untagged
@@ -180,6 +181,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &3634881811783956463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210024284976324837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90224f62bc0103046a8e6dcb40989e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDownValue: 5
 --- !u!1 &6901819729154132457
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +497,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8508134863952160179, guid: 475e3135d05c907428382316d6b59b71,
+        type: 3}
+      propertyPath: winLossPanel
+      value: 
+      objectReference: {fileID: 5805566145342869229}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 475e3135d05c907428382316d6b59b71, type: 3}
 --- !u!224 &1248033385085807242 stripped
@@ -789,6 +808,12 @@ PrefabInstance:
       objectReference: {fileID: 5210024284976324837}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535fdc397f6904947834db176879032a, type: 3}
+--- !u!1 &5805566145342869229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1750666903203483714, guid: 535fdc397f6904947834db176879032a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5249541178600726191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7482937434760304801 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3387452461061260814, guid: 535fdc397f6904947834db176879032a,
