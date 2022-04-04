@@ -8,7 +8,7 @@ public class SceneChangeButton : MonoBehaviour
     public void RandomMode()
     {
         GameController.Instance.score = 0;
-        int randomScene = Random.Range(1, 3);
+        int randomScene = Random.Range(1, 4);
         Debug.Log(randomScene);
         SceneManager.LoadScene(randomScene);
     }
