@@ -7,11 +7,13 @@ public class MoveIceCreamRandomly : MonoBehaviour
 {
     [SerializeField] private float pushForceMulitplier = 2f;
     [SerializeField] private float pushForce = 5f;
+    [SerializeField] private float scoreInfluenceRate = 1.005f;
     [SerializeField] private Rigidbody2D iceCreamRB;
 
     [SerializeField] private GameObject iceCreamCone;
     [SerializeField] private GameObject floor;
     [SerializeField] private GameObject winLossScreen;
+    [SerializeField] private GameObject cone;
 
     [SerializeField] private bool fallingOff;
     [SerializeField] private bool moveable;
@@ -35,7 +37,8 @@ public class MoveIceCreamRandomly : MonoBehaviour
             float randX = Random.Range(-10, 11);
             Vector2 newForce = new Vector2(randX / 10, 0);
             float newPush = Random.Range(-1, 1) > 0 ? pushForceMulitplier * pushForce : -pushForceMulitplier * pushForce;
-            iceCreamRB.AddForce(newForce * newPush + control.inputDir);
+            float actualPush = newPush * Mathf.Pow(scoreInfluenceRate,GameController.Instance.score);
+            iceCreamRB.AddForce(newForce * actualPush + control.inputDir);
         }
 
         if (timer.value <= 0 && !fallingOff)
@@ -62,6 +65,10 @@ public class MoveIceCreamRandomly : MonoBehaviour
             scoreScript.toggleScoreIncrease(false);
             timer.GetComponent<GameTimer>().drainTimer(false);
             winLossScreen.SetActive(true);
+        }
+        if (collision.gameObject == cone)
+        {
+            fallingOff = false;
         }
     }
 }

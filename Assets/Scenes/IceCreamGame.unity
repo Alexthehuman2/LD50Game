@@ -498,6 +498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
+      propertyPath: cone
+      value: 
+      objectReference: {fileID: 904818806}
+    - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
       propertyPath: floor
       value: 
       objectReference: {fileID: 860764922}
@@ -533,8 +538,18 @@ PrefabInstance:
       objectReference: {fileID: 1257737269483669708}
     - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
         type: 3}
+      propertyPath: scoreInfluenceRate
+      value: 1.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335549192699193480, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
       propertyPath: pushForceMulitplier
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241801746207745588, guid: 538f3de8350730b4fb91cebbfc2bedea,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538f3de8350730b4fb91cebbfc2bedea, type: 3}
@@ -670,7 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132e3f5192b835646b6890b9406a76b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 200
+  canMove: 0
 --- !u!4 &2021264643
 Transform:
   m_ObjectHideFlags: 0
@@ -1104,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 5805566145342869229, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6398422172933822677, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
