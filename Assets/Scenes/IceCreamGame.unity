@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  canMove: 0
 --- !u!4 &2021264643
 Transform:
   m_ObjectHideFlags: 0
@@ -1104,7 +1105,7 @@ PrefabInstance:
     - target: {fileID: 5805566145342869229, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6398422172933822677, guid: b833f28dd0556674b9e3c6516aea11ea,
         type: 3}

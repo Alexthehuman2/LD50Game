@@ -100,6 +100,8 @@ MonoBehaviour:
   fallThresholdInDegrees: 75
   fallSpeed: 1
   fallSpeedCap: 15
+  scoreCapInfluence: 1.01
+  playerRotInfluence: 12.5
 --- !u!1 &5365605826076389155
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,8 +172,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15c8ac083c17d004bb847d81c9f84b80, type: 3}
-  m_Color: {r: 1, g: 0.8815542, b: 0.6367924, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c2a4ae45041fca3468e8d8095bea0be1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
