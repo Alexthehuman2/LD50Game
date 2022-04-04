@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 200
-  canMove: 0
+  canMove: 1
 --- !u!4 &2021264643
 Transform:
   m_ObjectHideFlags: 0
