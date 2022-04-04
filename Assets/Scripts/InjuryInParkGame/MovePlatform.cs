@@ -5,7 +5,10 @@ using UnityEngine;
 public class MovePlatform : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
-
+    private void Start()
+    {
+        GameController.Instance.canMove= true;
+    }
     private void Update()
     {
         if (GameController.Instance.canMove)

@@ -21,6 +21,6 @@ public class CountdownScript : MonoBehaviour
             countDownValue--;
             this.GetComponent<Text>().text = countDownValue.ToString();
         }
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Random.Range(1, 3));
     }
 }
