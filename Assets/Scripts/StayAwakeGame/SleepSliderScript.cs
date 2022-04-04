@@ -26,10 +26,12 @@ public class SleepSliderScript : MonoBehaviour
             winloss.setState(WinLossState.LOSS);
             winloss.gameObject.SetActive(true);
         }
+        /*
         if (scalingDrainRate)
         {
             drainRate *= scalingFactor;
         }
+        */
     }
 
     public void IncrementSlider(float amount)
