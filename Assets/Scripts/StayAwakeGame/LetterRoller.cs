@@ -140,7 +140,7 @@ public class LetterRoller : MonoBehaviour
             control.setScore(control.score + 1);
             letter = char.ToUpper(RollLetter());
             letterText.text = letter.ToString();
-            timer.IncrementSlider(5f);
+            timer.IncrementSlider(0.05f);
         }
     }
 }

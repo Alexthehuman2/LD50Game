@@ -23,7 +23,7 @@ public class SleepSliderScript : MonoBehaviour
         sleepSlider.value -= Time.deltaTime * drainRate;
         if(sleepSlider.value <= 0)
         {
-            winloss.setState(WinLossState.WIN);
+            winloss.setState(WinLossState.LOSS);
             winloss.gameObject.SetActive(true);
         }
         if (scalingDrainRate)
