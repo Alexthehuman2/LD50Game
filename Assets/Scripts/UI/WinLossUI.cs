@@ -40,7 +40,7 @@ public class WinLossUI : MonoBehaviour
                 WinText.SetActive(false);
                 LoseText.SetActive(true);
                 scoreText.SetActive(true);
-                score.GetComponent<Text>().text = inGameScore.score.ToString();
+                score.GetComponent<Text>().text = GameController.Instance.score.ToString();
                 score.SetActive(true);
                 ReturnToTitleButton.SetActive(true);
                 RestartGameButton.SetActive(true);

@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class LetterRoller : MonoBehaviour
 {
     private char letter;
-    [SerializeField] private GameController control;
     [SerializeField] private Text letterText;
     [SerializeField] private SleepSliderScript timer;
+    [SerializeField] private Text score;
+    [SerializeField] private Animator door;
     // Start is called before the first frame update
     void Start()
     {
@@ -137,7 +138,12 @@ public class LetterRoller : MonoBehaviour
     {
         if (key == char.ToLower(letter))
         {
-            control.score = control.score + 1;
+            if (door.GetBool("isDoorOpened"))
+            {
+                timer.lose();
+            }
+            GameController.Instance.score++;
+            score.text = GameController.Instance.score.ToString();
             letter = char.ToUpper(RollLetter());
             letterText.text = letter.ToString();
             timer.IncrementSlider(0.05f);

@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BicycleGame.unity
     guid: 3eb37d0e58e1dec46888a8139efd826f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StayingUpGame.unity
     guid: 548a853ad0f4c144c97f64d9511c0038
   - enabled: 1
