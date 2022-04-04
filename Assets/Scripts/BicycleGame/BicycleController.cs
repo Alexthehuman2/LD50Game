@@ -9,7 +9,7 @@ public class BicycleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameController.Instance.canMove = true;
     }
 
     // Update is called once per frame
