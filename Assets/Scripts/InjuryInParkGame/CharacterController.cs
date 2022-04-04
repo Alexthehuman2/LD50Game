@@ -14,6 +14,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float fallThresholdInDegrees = 75f;
     [SerializeField] private float fallSpeed = 10f;
     [SerializeField] private float fallSpeedCap = 15f;
+    [SerializeField] private float scoreCapInfluence = 1.01f;
     [SerializeField] private float playerRotInfluence = 12.5f;
 
     private void Start()
@@ -28,23 +29,49 @@ public class CharacterController : MonoBehaviour
 
         //Decides rotation state whether to increase left or right
         rotatingLeft = (playerRot.z >= 0);
-        Debug.Log("Rotating Left? : " + rotatingLeft);
+
+        if (playerRot.z >= 0 && playerRot.z < 180)
+        {
+            rotatingLeft = true;
+        }
+        else if (playerRot.z < 360 && playerRot.z > 180)
+        {
+            rotatingLeft = false;
+        }
         
         if (GameController.Instance.canMove)
         {
             //Rotation Polish: LERP the rot speed to cap
             float rotZ = rotatingLeft == true ? fallSpeed : -fallSpeed; //this get influenced by player input
             currentZ += rotZ;
-            if (currentZ > fallSpeedCap)
-            {
-                currentZ = fallSpeedCap;
-            }
-            else if (currentZ < -fallSpeedCap)
-            {
-                currentZ = -fallSpeedCap;
-            }
 
-            float threshold = rotatingLeft == true ? fallThresholdInDegrees : -fallThresholdInDegrees;
+            
+            float standardCap = 0;
+            //rotation based Cap: add a multiplier to fall speed based on how far the player's rotated.
+            if (playerRot.z > 180 && playerRot.z < 360)
+            {
+                standardCap = -fallSpeedCap + (playerRot.z - 360);
+            }
+            else if (playerRot.z >= 0 && playerRot.z < 180)
+            {
+                standardCap = fallSpeedCap + (playerRot.z);
+            }
+            Debug.Log("StandardCap: " + standardCap);
+            
+
+
+            //actual cap adds a score based scaling
+            float actualCap = fallSpeedCap * Mathf.Pow(scoreCapInfluence, (float)GameController.Instance.score);
+            if (currentZ > actualCap)
+            {
+                currentZ = actualCap;
+            }
+            else if (currentZ < -actualCap)
+            {
+                currentZ = -actualCap;
+            }
+            //Debug.Log("Current Z: " + currentZ);
+            
 
             //player input
             if (Input.GetKey(KeyCode.D))
@@ -66,8 +93,7 @@ public class CharacterController : MonoBehaviour
 
         //if the player falls over, this happens
         //POLISH: Make it so it only happens when it touches the ground and rotation is beyond threshold.
-        // -1, 359
-        if ((playerRot.z > fallThresholdInDegrees || playerRot.z < -fallThresholdInDegrees) && GameController.Instance.canMove)
+        if (((playerRot.z > fallThresholdInDegrees && playerRot.z < 180) || (playerRot.z < 360-fallThresholdInDegrees && playerRot.z > 180)) && GameController.Instance.canMove)
         {
             Debug.Log("This is running");
             gameObject.GetComponent<Rigidbody2D>().isKinematic = true; //freezes player
