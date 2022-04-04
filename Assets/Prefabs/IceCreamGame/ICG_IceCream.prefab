@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3280165801240101770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.72, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.053, y: -0.002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3787111496481956868}
   m_RootOrder: 0
@@ -72,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15c8ac083c17d004bb847d81c9f84b80, type: 3}
+  m_Sprite: {fileID: 1048275100392124239, guid: cf0f56a6b9d16b6418ba37a81e0986b9,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02941668, y: 0.034765124}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.69116664, y: 0.32349992}
   m_EdgeRadius: 0
 --- !u!50 &4635023311182161369
 Rigidbody2D:
@@ -144,7 +145,7 @@ GameObject:
   - component: {fileID: 5241801746207745588}
   - component: {fileID: 4335549192699193480}
   m_Layer: 0
-  m_Name: IceCream
+  m_Name: ICG_IceCream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +160,7 @@ Transform:
   m_GameObject: {fileID: 4266951350312792813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8204741040633576144}
   - {fileID: 34159748021913255}
@@ -205,7 +206,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15c8ac083c17d004bb847d81c9f84b80, type: 3}
+  m_Sprite: {fileID: -3045450070073289777, guid: cf0f56a6b9d16b6418ba37a81e0986b9,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -229,7 +231,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.31288624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -240,7 +242,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.37422752}
   m_EdgeRadius: 0
 --- !u!50 &5241801746207745588
 Rigidbody2D:
@@ -275,8 +277,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3190f8c437a31949b113f4eef4586fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushForceMulitplier: 2
   pushForce: 5
+  scoreInfluenceRate: 1.005
   iceCreamRB: {fileID: 0}
+  iceCreamCone: {fileID: 0}
+  floor: {fileID: 0}
+  winLossScreen: {fileID: 0}
+  cone: {fileID: 0}
+  fallingOff: 0
+  moveable: 0
+  scoreScript: {fileID: 0}
+  control: {fileID: 0}
+  timer: {fileID: 0}
 --- !u!1 &6070187069598359236
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,8 +317,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6070187069598359236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.07, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3787111496481956868}
   m_RootOrder: 1
@@ -349,7 +362,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15c8ac083c17d004bb847d81c9f84b80, type: 3}
+  m_Sprite: {fileID: -6081029020571482453, guid: cf0f56a6b9d16b6418ba37a81e0986b9,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -373,7 +387,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0026742518, y: 0.33962876}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -384,7 +398,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.50259084, y: 0.3207425}
   m_EdgeRadius: 0
 --- !u!50 &1490754871504829337
 Rigidbody2D:
