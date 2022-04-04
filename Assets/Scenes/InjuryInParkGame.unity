@@ -623,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
       propertyPath: scoreCapInfluence
-      value: 1.006
+      value: 1.005
       objectReference: {fileID: 0}
     - target: {fileID: 6241585799819735823, guid: 0a23087dfbfbdae4d9c83f6f37e24ee9,
         type: 3}
