@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -9,7 +10,13 @@ public class GameController : MonoBehaviour
     //Global Statement whether objects can move
     public bool canMove;
 
-
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
     //Do not add anything beyond this line
     //------------------------------------------------------------------------------------------------------------------------------------------

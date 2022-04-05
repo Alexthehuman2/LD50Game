@@ -21,6 +21,8 @@ public class MoveIceCreamRandomly : MonoBehaviour
     [SerializeField] private IceCreamController control;
     [SerializeField] private Slider timer;
 
+    [SerializeField] private AudioSource splat;
+
 
     private void Start()
     {
@@ -30,16 +32,7 @@ public class MoveIceCreamRandomly : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (!fallingOff && moveable)
-        {
-            //rigidbody2d add force to an axis randomly between clamped to -1 to 1, multiplied by pushforce
-            float randX = Random.Range(-10, 11);
-            Vector2 newForce = new Vector2(randX / 10, 0);
-            float newPush = Random.Range(-1, 1) > 0 ? pushForceMulitplier * pushForce : -pushForceMulitplier * pushForce;
-            float actualPush = newPush * Mathf.Pow(scoreInfluenceRate,GameController.Instance.score);
-            iceCreamRB.AddForce(newForce * actualPush + control.inputDir);
-        }
+    { 
 
         if (timer.value <= 0 && !fallingOff)
         {
@@ -47,6 +40,19 @@ public class MoveIceCreamRandomly : MonoBehaviour
             moveable = false;
             winLossScreen.SetActive(true);
             scoreScript.toggleScoreIncrease(false);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!fallingOff && moveable)
+        {
+            //rigidbody2d add force to an axis randomly between clamped to -1 to 1, multiplied by pushforce
+            float randX = Random.Range(-10, 11);
+            Vector2 newForce = new Vector2(randX / 10, 0);
+            float newPush = Random.Range(-1, 1) > 0 ? pushForceMulitplier * pushForce : -pushForceMulitplier * pushForce;
+            float actualPush = newPush * Mathf.Pow(scoreInfluenceRate, GameController.Instance.score);
+            iceCreamRB.AddForce(newForce * actualPush + control.inputDir);
         }
     }
 
@@ -65,6 +71,7 @@ public class MoveIceCreamRandomly : MonoBehaviour
             scoreScript.toggleScoreIncrease(false);
             timer.GetComponent<GameTimer>().drainTimer(false);
             winLossScreen.SetActive(true);
+            splat.Play();
         }
         if (collision.gameObject == cone)
         {

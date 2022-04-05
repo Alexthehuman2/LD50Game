@@ -16,12 +16,15 @@ public class SleepSliderScript : MonoBehaviour
     [SerializeField] private GameObject score;
     [SerializeField] private GameObject Door;
     [SerializeField] private Text timerText;
+    [SerializeField] private AudioSource doorOpening;
+    [SerializeField] private AudioSource doorClosing;
     private Animator doorAnim;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        GameController.Instance.canMove = true;
         doorAnim = Door.GetComponent<Animator>();
         StartCoroutine(ParentAppearing());
     }
@@ -63,7 +66,7 @@ public class SleepSliderScript : MonoBehaviour
         if (timeRemaining <= 0)
         {
             GameController.Instance.canMove = false;
-            StopCoroutine(ParentAppearing());
+            StopAllCoroutines();
             score.GetComponent<ScoreScript>().toggleScoreIncrease(false);
             timerText.gameObject.SetActive(false);
             LetterOnScreen.SetActive(false);
@@ -74,7 +77,7 @@ public class SleepSliderScript : MonoBehaviour
         if (sleepSlider.value <= 0)
         {
             GameController.Instance.canMove = false;
-            StopCoroutine(ParentAppearing());
+            StopAllCoroutines();
             score.GetComponent<ScoreScript>().toggleScoreIncrease(false);
             timerText.gameObject.SetActive(false);
             LetterOnScreen.SetActive(false);
@@ -92,8 +95,10 @@ public class SleepSliderScript : MonoBehaviour
     IEnumerator ParentAppearing()
     {
         yield return new WaitForSeconds(Random.Range(5, 10));
+        doorOpening.Play();
         doorAnim.SetBool("isDoorOpened", true);
         yield return new WaitForSeconds(5);
+        doorClosing.Play();
         doorAnim.SetBool("isDoorOpened", false);
         StartCoroutine(ParentAppearing());
     }
@@ -105,7 +110,7 @@ public class SleepSliderScript : MonoBehaviour
     public void lose()
     {
         GameController.Instance.canMove = false;
-        StopCoroutine(ParentAppearing());
+        StopAllCoroutines();
         score.GetComponent<ScoreScript>().toggleScoreIncrease(false);
         timerText.gameObject.SetActive(false);
         LetterOnScreen.SetActive(false);

@@ -25,9 +25,8 @@ public class WinLossUI : MonoBehaviour
     [SerializeField] private GameObject TimerUntilNextGame;
     [SerializeField] private ScoreScript inGameScore;
 
-    private void Start()
+    private void Awake()
     {
-
         this.gameObject.SetActive(false);
     }
 
