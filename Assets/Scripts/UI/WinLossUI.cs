@@ -24,6 +24,7 @@ public class WinLossUI : MonoBehaviour
     [SerializeField] private GameObject NextGameInText;
     [SerializeField] private GameObject TimerUntilNextGame;
     [SerializeField] private ScoreScript inGameScore;
+    [SerializeField] private GameObject spaceBarSkip;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class WinLossUI : MonoBehaviour
         switch (state)
         {
             case WinLossState.LOSS:
+                spaceBarSkip.SetActive(false);
                 WinText.SetActive(false);
                 LoseText.SetActive(true);
                 scoreText.SetActive(true);
@@ -47,6 +49,7 @@ public class WinLossUI : MonoBehaviour
                 TimerUntilNextGame.SetActive(false);
                 return;
             case WinLossState.WIN:
+                spaceBarSkip.SetActive(true);
                 WinText.SetActive(true);
                 LoseText.SetActive(false);
                 scoreText.SetActive(false);

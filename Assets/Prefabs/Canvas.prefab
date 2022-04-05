@@ -1077,6 +1077,11 @@ PrefabInstance:
       objectReference: {fileID: 8117980954798062440}
     - target: {fileID: 4839898744017907138, guid: 535fdc397f6904947834db176879032a,
         type: 3}
+      propertyPath: spaceBarSkip
+      value: 
+      objectReference: {fileID: 361202267460199894}
+    - target: {fileID: 4839898744017907138, guid: 535fdc397f6904947834db176879032a,
+        type: 3}
       propertyPath: NextGameInText
       value: 
       objectReference: {fileID: 8372869420743025198}
@@ -1131,6 +1136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447880776843274410, guid: 535fdc397f6904947834db176879032a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5699897391541357573, guid: 535fdc397f6904947834db176879032a,
         type: 3}
@@ -1204,6 +1214,12 @@ GameObject:
 --- !u!224 &7482937434760304801 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3387452461061260814, guid: 535fdc397f6904947834db176879032a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5249541178600726191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &361202267460199894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5609552674968042361, guid: 535fdc397f6904947834db176879032a,
     type: 3}
   m_PrefabInstance: {fileID: 5249541178600726191}
   m_PrefabAsset: {fileID: 0}
